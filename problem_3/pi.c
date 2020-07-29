@@ -1,20 +1,24 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int r[2800 + 1];
     int i, k;
     int b, d;
     int c = 0;
 
-    for (i = 0; i < 2800; i++) {
+    for (i = 0; i < 2800; i++) 
+    {
         r[i] = 2000;
     }
 
-    for (k = 2800; k > 0; k -= 14) {
+    for (k = 2800; k > 0; k -= 14) 
+    {
         d = 0;
 
         i = k;
-        for (;;) {
+        for (;;)
+        {
             d += r[i] * 10000;
             b = 2 * i - 1;
 
@@ -26,8 +30,8 @@ int main() {
         }
         printf("%.4d", c + d / 10000);
         c = d % 10000;
-    }
-    printf("\n");
+     }
+     printf("\n");
 
     return 0;
 }
